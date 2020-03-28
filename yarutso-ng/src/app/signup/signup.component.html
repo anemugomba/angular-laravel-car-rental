@@ -1,0 +1,62 @@
+
+<div class="center_div col-6 offset-4">
+  <h1 class="title-modern center_div">New User</h1>
+
+  <form #signForm=ngForm (ngSubmit)="onSubmit()">
+
+    <div class="form-group row">
+      <label for="inputEmail8" class="col-sm-2 col-form-label">Name</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="inputEmail8" name="Name"
+        placeholder="Email" [(ngModel)]="form.name" autocomplete="cc-given-name" required>
+        <div class="alert alert-danger" [hidden]="!error.name">
+          {{error.name}}
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="inputEmail3" name="email"
+        placeholder="Email" [(ngModel)]="form.email" autocomplete="email" required>
+        <div class="alert alert-danger" [hidden]="!error.email">
+          {{error.email}}
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+      <div class="col-sm-10">
+        <input type="password" class="form-control" id="inputPassword3" name="password"
+        placeholder="Password" [(ngModel)]="form.password" autocomplete="current-password" required>
+        <div class="alert alert-danger" [hidden]="!error.password">
+          {{error.password}}
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputPassword7" class="col-sm-2 col-form-label">Confirm Password</label>
+      <div class="col-sm-10">
+        <input type="password" class="form-control" id="inputPassword7" name="password"
+        placeholder="Confirm Password" [(ngModel)]="form.password_confirmation" autocomplete="current-password" required>
+      </div>
+    </div>
+
+
+    <div class="form-group row">
+      <div class="col-sm-10">
+        <button type="submit" class="btn btn-primary" [disabled]="!signForm.valid">Sign up</button>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-sm-10">
+        <a [routerLink]="['/admin/login']" routerLinkActive="router-link-active"  class="btn btn-danger">Sign In</a>
+      </div>
+    </div>
+
+  </form>
+</div>
