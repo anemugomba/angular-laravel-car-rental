@@ -26,7 +26,8 @@
             "styles": [
               "src/styles.css",
               "src/assets/css/bootstrap.css",
-              "src/assets/css/gaia.css"
+              "src/assets/css/gaia.css",
+              "../yarutso-ng/node_modules/ng-snotify/styles/material.scss"
             ],
             "scripts": [
               "src/assets/js/jquery.min.js",
