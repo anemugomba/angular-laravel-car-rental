@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -24,4 +25,26 @@ export class DoReqService {
   changePassword(data) {
     return this.http.post(`${this.baseUrl}/resetPassword`, data);
   }
+
+  getCars(sort: string, order: string, page: number): Observable<Car> {
+    console.log('sort', sort);
+    console.log('order', order);
+    console.log('page number', page);
+    return this.http.get<Car>(`${this.baseUrl}/cars?sort=${sort}&order=${order}&page=${page + 1}`);
+  }
+
+  public upload(formData) {
+
+    return this.http.post<any>(`${this.baseUrl}/addCar`, formData, {
+        reportProgress: true,
+        observe: 'events'
+      });
+  }
+}
+
+export interface Car {
+  name: string;
+  description: string;
+  price: BigInteger;
+  img_name: string;
 }

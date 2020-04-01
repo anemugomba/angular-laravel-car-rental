@@ -15,6 +15,21 @@ import { ResponseResetComponent } from './password/response-reset/response-reset
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatTableModule} from '@angular/material/table';
+import { AllCarsComponent } from './all-cars/all-cars.component';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { MatSortModule  } from '@angular/material/sort';
+
 
 
 @NgModule({
@@ -28,6 +43,7 @@ import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
     ProfileComponent,
     RequestResetComponent,
     ResponseResetComponent,
+    AllCarsComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +51,20 @@ import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    SnotifyModule
+    SnotifyModule,
+    MatProgressBarModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatCardModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDialogModule,
+    MatMenuModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatProgressSpinnerModule,
+    MatSortModule
   ],
   providers: [
     {provide: 'SnotifyToastConfig', useValue: ToastDefaults},

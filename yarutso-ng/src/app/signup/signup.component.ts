@@ -18,7 +18,12 @@ export class SignupComponent implements OnInit {
     password_confirmation : null
   };
 
-  error;
+  public error = {
+    name : null,
+    email : null,
+    password : null,
+    password_confirmation : null
+  };
 
   constructor(private DoReq: DoReqService, private Token: TokenService,
               private router: Router) { }
