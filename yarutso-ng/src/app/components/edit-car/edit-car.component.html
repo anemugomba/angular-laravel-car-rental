@@ -1,0 +1,51 @@
+<div>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+
+    <div *ngIf="error.name" class="alert alert-danger" role="alert">
+      {{error.name}}
+    </div>
+    <div *ngIf="error.description" class="alert alert-danger" role="alert">
+      {{error.description}}
+    </div>
+    <div *ngIf="error.image" class="alert alert-danger" role="alert">
+      {{error.image}}
+    </div>
+    <div *ngIf="error.price" class="alert alert-danger" role="alert">
+      {{error.price}}
+    </div>
+
+    <div class="form-group">
+      <label for="exampleFormControlFile1">Select Vehicle Image</label>
+      <input class="form-control-file" id="exampleFormControlFile1" type="file" #fileupload [(ngModel)]="myFile" name="myFile" (change)="fileEvent($event)"/>
+    </div>
+
+<div>
+  <mat-form-field appearance="outline">
+    <mat-label>Vehicle Name</mat-label>
+    <input matInput placeholder="Name" [(ngModel)]="form.name" name="name" required>
+    <mat-icon matSuffix>assignment_turned_in</mat-icon>
+    <mat-hint>Hint: Black LaCross 2013</mat-hint>
+  </mat-form-field>
+</div>
+
+<p>
+  <mat-form-field appearance="outline">
+    <mat-label>Description</mat-label>
+    <input matInput placeholder="Description" [(ngModel)]="form.description" name="description" required>
+    <mat-icon matSuffix>book</mat-icon>
+    <mat-hint>Hint: large 4 wheel drive SUV</mat-hint>
+  </mat-form-field>
+</p>
+
+<p>
+  <mat-form-field appearance="outline">
+    <mat-label>Price</mat-label>
+    <input matInput placeholder="Price" [(ngModel)]="form.price" name="price" required>
+    <mat-icon matSuffix>attach_money</mat-icon>
+    <mat-hint>Hint: USD</mat-hint>
+  </mat-form-field>
+</p>
+
+<button mat-raised-button color="primary" [disabled]="!f.valid">Submit</button>
+</form>
+</div>

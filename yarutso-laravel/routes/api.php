@@ -20,5 +20,6 @@ Route::group([
     Route::post('resetPassword', 'ChangePasswordController@process');
     Route::get('cars','CarsController@get');
     Route::post('addCar','CarsController@add');
+    Route::post('updateCar','CarsController@update');
 
 });

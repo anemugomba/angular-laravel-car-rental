@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Car } from '../car';
 
 @Injectable({
   providedIn: 'root'
@@ -40,11 +41,12 @@ export class DoReqService {
         observe: 'events'
       });
   }
+
+  public upDateCar(formData) {
+    return this.http.post<any>(`${this.baseUrl}/updateCar`, formData, {
+      reportProgress: true,
+      observe: 'events'
+    });
+  }
 }
 
-export interface Car {
-  name: string;
-  description: string;
-  price: BigInteger;
-  img_name: string;
-}

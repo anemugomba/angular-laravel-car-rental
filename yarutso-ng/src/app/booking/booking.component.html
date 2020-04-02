@@ -1,0 +1,106 @@
+<nav class="navbar navbar-default navbar-default navbar-fixed-top" color-on-scroll="200">
+  <!-- if you want to keep the navbar hidden you can add this class to the navbar "navbar-burger"-->
+  <div class="container">
+      <div class="navbar-header">
+          <button id="menu-toggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar bar1"></span>
+              <span class="icon-bar bar2"></span>
+              <span class="icon-bar bar3"></span>
+          </button>
+          <a href="http://www.yarutso.com" class="navbar-left">
+            <img src="assets/img/Yarutso-logo-no-bg.png" style="height: 60px;" alt="">
+          </a>
+      </div>
+      <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right navbar-uppercase">
+              <li>
+                  <a href="" >Home</a>
+              </li>
+              <li class="dropdown">
+                  <a href="#gaia" class="dropdown-toggle" data-toggle="dropdown">
+                      <i class="fa fa-share-alt"></i> Share
+                  </a>
+                  <ul class="dropdown-menu dropdown-danger">
+                      <li>
+                          <a href="#"><i class="fa fa-facebook-square"></i> Facebook</a>
+                      </li>
+                      <li>
+                          <a href="#"><i class="fa fa-twitter"></i> Twitter</a>
+                      </li>
+                      <li>
+                          <a href="#"><i class="fa fa-instagram"></i> Instagram</a>
+                      </li>
+                  </ul>
+              </li>
+              <li>
+                  <button class="btn btn-danger btn-fill">Create Booking</button>
+              </li>
+          </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+  </div>
+</nav>
+
+<div class="section section-header">
+  <div class="parallax filter filter-color-gold">
+      <div class="image"
+          style="background-image: url('assets/img/yarutso-header-1.jpg')">
+      </div>
+      <div class="container">
+          <div style="margin-top: 100px;">
+            <mat-card class="center_div">
+              <mat-card-header>
+                <mat-card-title>Book a vehicle</mat-card-title>
+                <mat-card-subtitle>Give us your details and we will get intouch with you.</mat-card-subtitle>
+              </mat-card-header>
+              <mat-card-content>
+                <form action="">
+                  <mat-form-field>
+                    <mat-label>From</mat-label>
+                    <input matInput [matDatepicker]="picker1" [formControl]="date">
+                    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                    <mat-datepicker #picker1></mat-datepicker>
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field>
+                    <mat-label>To</mat-label>
+                    <input matInput [matDatepicker]="picker2"
+                           [formControl]="serializedDate">
+                    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                    <mat-datepicker #picker2></mat-datepicker>
+                  </mat-form-field>
+                <br>
+                  <!--<mat-form-field>
+                    <mat-label>Value binding</mat-label>
+                    <input matInput [matDatepicker]="picker3" [value]="date.value">
+                    <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+                    <mat-datepicker #picker3></mat-datepicker>
+                  </mat-form-field>-->
+                  <p>
+                    <mat-form-field appearance="outline">
+                      <mat-label>Email</mat-label>
+                      <input matInput placeholder="Email" name="description" required>
+                      <mat-icon matSuffix>book</mat-icon>
+                      <mat-hint>Hint: you@mail.com</mat-hint>
+                    </mat-form-field>
+                  </p>
+
+                  <p>
+                    <mat-form-field appearance="outline">
+                      <mat-label>Phone Number</mat-label>
+                      <input matInput placeholder="Phone Number" name="Phone" required>
+                      <mat-icon matSuffix>attach_money</mat-icon>
+                      <mat-hint>Hint: +263</mat-hint>
+                    </mat-form-field>
+                  </p>
+
+                  <button mat-raised-button color="primary">Submit</button>
+                </form>
+              </mat-card-content>
+            </mat-card>
+          </div>
+
+      </div>
+  </div>
+</div>

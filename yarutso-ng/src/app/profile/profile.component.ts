@@ -4,6 +4,7 @@ import { HttpEventType, HttpErrorResponse } from '@angular/common/http';
 import { of } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -12,7 +13,7 @@ import { NgForm } from '@angular/forms';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor(private DoReq: DoReqService) { }
+  constructor(private DoReq: DoReqService, private router: Router) { }
 
   filedata: any;
   form = {
@@ -35,7 +36,7 @@ export class ProfileComponent implements OnInit {
     }
 
   ngOnInit(): void {
-    this.DoReq.getCars().subscribe(data => console.log(data), error => console.error(error));
+    // this.DoReq.getCars().subscribe(data => console.log(data), error => console.error(error));
   }
 
 
@@ -48,6 +49,7 @@ export class ProfileComponent implements OnInit {
     myFormData.append('price', this.form.price);
     this.DoReq.upload(myFormData).subscribe(data => {
       console.log(data);
+      this.router.navigate(['/admin/all-cars']);
  }, err => this.handleError(err));
 
   }

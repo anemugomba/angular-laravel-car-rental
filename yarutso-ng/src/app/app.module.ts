@@ -12,7 +12,7 @@ import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RequestResetComponent } from './password/request-reset/request-reset.component';
 import { ResponseResetComponent } from './password/response-reset/response-reset.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
@@ -29,7 +29,12 @@ import { AllCarsComponent } from './all-cars/all-cars.component';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { MatSortModule  } from '@angular/material/sort';
-
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+import { SingleCarComponent } from './components/single-car/single-car.component';
+import { EditCarComponent } from './components/edit-car/edit-car.component';
+import { BookingComponent } from './booking/booking.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { NativeDateAdapter, DateAdapter, MAT_DATE_FORMATS, MatNativeDateModule } from '@angular/material/core';
 
 
 @NgModule({
@@ -44,6 +49,13 @@ import { MatSortModule  } from '@angular/material/sort';
     RequestResetComponent,
     ResponseResetComponent,
     AllCarsComponent,
+    SingleCarComponent,
+    EditCarComponent,
+    BookingComponent
+  ],
+  entryComponents : [
+    SingleCarComponent,
+    EditCarComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +76,11 @@ import { MatSortModule  } from '@angular/material/sort';
     MatTableModule,
     MatPaginatorModule,
     MatProgressSpinnerModule,
-    MatSortModule
+    MatSortModule,
+    MatBottomSheetModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    ReactiveFormsModule
   ],
   providers: [
     {provide: 'SnotifyToastConfig', useValue: ToastDefaults},
