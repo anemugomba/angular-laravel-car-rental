@@ -35,6 +35,8 @@ import { EditCarComponent } from './components/edit-car/edit-car.component';
 import { BookingComponent } from './booking/booking.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { NativeDateAdapter, DateAdapter, MAT_DATE_FORMATS, MatNativeDateModule } from '@angular/material/core';
+import { CheckOutComponent } from './check-out/check-out.component';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 @NgModule({
@@ -51,7 +53,8 @@ import { NativeDateAdapter, DateAdapter, MAT_DATE_FORMATS, MatNativeDateModule }
     AllCarsComponent,
     SingleCarComponent,
     EditCarComponent,
-    BookingComponent
+    BookingComponent,
+    CheckOutComponent
   ],
   entryComponents : [
     SingleCarComponent,
@@ -80,7 +83,8 @@ import { NativeDateAdapter, DateAdapter, MAT_DATE_FORMATS, MatNativeDateModule }
     MatBottomSheetModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatGridListModule
   ],
   providers: [
     {provide: 'SnotifyToastConfig', useValue: ToastDefaults},

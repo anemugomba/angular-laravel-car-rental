@@ -11,11 +11,13 @@ import { BeforeLoginService } from './services/before-login.service';
 import { AfterLoginService } from './services/after-login.service';
 import { AllCarsComponent } from './all-cars/all-cars.component';
 import { BookingComponent } from './booking/booking.component';
+import { CheckOutComponent } from './check-out/check-out.component';
 
 
 const routes: Routes = [
   {path: '', component: LandingComponent},
   {path: 'create-booking', component: BookingComponent},
+  {path: 'checkout', component: CheckOutComponent},
   {path: 'admin', component: AdminLayoutComponent , children: [
     { path: 'login', component: LoginComponent, canActivate: [BeforeLoginService] },
     { path: 'signup', component: SignupComponent, canActivate: [AfterLoginService]},

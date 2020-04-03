@@ -19,22 +19,19 @@
               </li>
               <li class="dropdown">
                   <a href="#gaia" class="dropdown-toggle" data-toggle="dropdown">
-                      <i class="fa fa-share-alt"></i> Share
+                      <i class="fa fa-share-alt"></i> Social
                   </a>
                   <ul class="dropdown-menu dropdown-danger">
                       <li>
                           <a href="#"><i class="fa fa-facebook-square"></i> Facebook</a>
                       </li>
                       <li>
-                          <a href="#"><i class="fa fa-twitter"></i> Twitter</a>
+                          <a href="#"><i class="fa fa-twitter"></i> Linked In</a>
                       </li>
                       <li>
                           <a href="#"><i class="fa fa-instagram"></i> Instagram</a>
                       </li>
                   </ul>
-              </li>
-              <li>
-                  <button class="btn btn-danger btn-fill">Create Booking</button>
               </li>
           </ul>
       </div>
@@ -43,9 +40,9 @@
 </nav>
 
 <div class="section section-header">
-  <div class="parallax filter filter-color-gold">
+  <div class="parallax filter">
       <div class="image"
-          style="background-image: url('assets/img/yarutso-header-1.jpg')">
+          style="background-image: url('assets/img/book-car-header.jpg')">
       </div>
       <div class="container">
           <div style="margin-top: 100px;">
@@ -95,7 +92,7 @@
                     </mat-form-field>
                   </p>
 
-                  <button mat-raised-button color="primary">Submit</button>
+                  <button mat-raised-button color="primary" [routerLink]="['/checkout']" routerLinkActive="router-link-active" >Proceed to select vehicle</button>
                 </form>
               </mat-card-content>
             </mat-card>
