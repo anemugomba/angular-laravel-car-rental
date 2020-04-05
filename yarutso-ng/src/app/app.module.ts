@@ -37,6 +37,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { NativeDateAdapter, DateAdapter, MAT_DATE_FORMATS, MatNativeDateModule } from '@angular/material/core';
 import { CheckOutComponent } from './check-out/check-out.component';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     SingleCarComponent,
     EditCarComponent,
     BookingComponent,
-    CheckOutComponent
+    CheckOutComponent,
+    ContactUsComponent
   ],
   entryComponents : [
     SingleCarComponent,

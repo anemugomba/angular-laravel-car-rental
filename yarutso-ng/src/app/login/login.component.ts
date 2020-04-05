@@ -35,9 +35,10 @@ export class LoginComponent implements OnInit {
   }
 
   handleResponse(data) {
+    console.log(data);
     this.Token.handle(data.access_token);
     this.Auth.changeAuthStatus(true);
-    this.router.navigateByUrl('/admin/profile');
+    this.router.navigateByUrl('/admin/all-cars');
   }
 
   handleError(error) {

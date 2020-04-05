@@ -21,5 +21,4 @@ Route::group([
     Route::get('cars','CarsController@get');
     Route::post('addCar','CarsController@add');
     Route::post('updateCar','CarsController@update');
-
 });

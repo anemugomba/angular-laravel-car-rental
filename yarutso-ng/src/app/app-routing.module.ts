@@ -12,16 +12,18 @@ import { AfterLoginService } from './services/after-login.service';
 import { AllCarsComponent } from './all-cars/all-cars.component';
 import { BookingComponent } from './booking/booking.component';
 import { CheckOutComponent } from './check-out/check-out.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 
 const routes: Routes = [
   {path: '', component: LandingComponent},
   {path: 'create-booking', component: BookingComponent},
   {path: 'checkout', component: CheckOutComponent},
+  {path: 'contact-us', component: ContactUsComponent},
   {path: 'admin', component: AdminLayoutComponent , children: [
     { path: 'login', component: LoginComponent, canActivate: [BeforeLoginService] },
     { path: 'signup', component: SignupComponent, canActivate: [AfterLoginService]},
-    { path: 'profile', component: ProfileComponent, canActivate: [AfterLoginService]},
+    { path: 'add-car', component: ProfileComponent, canActivate: [AfterLoginService]},
     { path: 'request-password-reset', component: RequestResetComponent , canActivate: [BeforeLoginService]},
     { path: 'response-password-reset', component: ResponseResetComponent , canActivate: [BeforeLoginService]},
     { path: 'all-cars', component: AllCarsComponent , canActivate: [AfterLoginService]},

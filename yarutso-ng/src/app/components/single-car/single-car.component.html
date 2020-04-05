@@ -1,10 +1,10 @@
-<mat-card class="example-card">
+<mat-card class="example-card" style="width: 300px;">
   <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
     <mat-card-title>{{car.name}}</mat-card-title>
     <mat-card-subtitle>$ {{car.price}}</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image src="http://localhost:8000/img/{{car.img_name}}" alt="{{car.img_name}}">
+  <img mat-card-image src="{{imgUrlBase}}{{car.img_name}}" alt="{{car.img_name}}">
   <mat-card-content>
     <p>
      {{car.description}}

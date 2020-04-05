@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CanActivate } from '@angular/router';
+import { CanActivate, Router } from '@angular/router';
 import { TokenService } from './token.service';
 
 @Injectable({
@@ -7,7 +7,7 @@ import { TokenService } from './token.service';
 })
 export class AfterLoginService implements CanActivate {
 
-  constructor(private Token: TokenService) { }
+  constructor(private Token: TokenService, private router: Router) { }
   canActivate(route: import('@angular/router').ActivatedRouteSnapshot,
               state: import('@angular/router').RouterStateSnapshot): boolean |
               import('@angular/router').UrlTree |
@@ -16,6 +16,9 @@ export class AfterLoginService implements CanActivate {
               Promise<boolean |
               import('@angular/router').UrlTree> {
 
-    return this.Token.loggedIn();
+                if ( !this.Token.loggedIn() ) {
+                  this.router.navigate(['/admin/login']);
+                }
+                return this.Token.loggedIn();
   }
 }

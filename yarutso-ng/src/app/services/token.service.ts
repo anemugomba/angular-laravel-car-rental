@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { tokenName } from '@angular/compiler';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -7,11 +8,14 @@ import { tokenName } from '@angular/compiler';
 export class TokenService {
 
   private iss = {
-    login : 'http://localhost:8000/api/login',
-    signup : 'http://localhost:8000/api/signup'
+    login : environment.apiUrlBase + 'index.php/api/login',
+    signup : environment.apiUrlBase + 'index.php/api/signup'
   };
 
-  constructor() { }
+  constructor() {
+    this.iss.login = environment.apiUrlBase + 'index.php/api/login';
+    this.iss.signup = environment.apiUrlBase + 'index.php/api/signup';
+  }
 
   handle(token) {
     this.set(token);

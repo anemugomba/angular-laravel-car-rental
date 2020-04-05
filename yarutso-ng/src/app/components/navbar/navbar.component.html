@@ -1,7 +1,6 @@
 <mat-toolbar color="primary" class="app-toolbar">
 
   <button mat-button [matMenuTriggerFor]="menu" *ngIf="loggedIn">Cars</button>
-  <button mat-button  *ngIf="loggedIn">Profile</button>
   <button mat-button [routerLink]="['/admin/signup']" *ngIf="loggedIn">New User</button>
   <button mat-button (click)="logout($event)" *ngIf="loggedIn">Logout</button>
   <button mat-button [routerLink]="['/admin/login']" *ngIf="!loggedIn">Sign in</button>
@@ -18,7 +17,7 @@
   <button mat-menu-item [routerLink]="['/admin/all-cars']" routerLinkActive="router-link-active" >
     <span>View</span>
   </button>
-  <button mat-menu-item [routerLink]="['/admin/profile']">
+  <button mat-menu-item [routerLink]="['/admin/add-car']">
     <span>Add New</span>
   </button>
   <button mat-menu-item disabled>

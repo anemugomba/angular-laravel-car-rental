@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DoReqService } from '../services/do-req.service';
 import { Car } from '../car';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-check-out',
@@ -9,15 +10,21 @@ import { Car } from '../car';
 })
 export class CheckOutComponent implements OnInit {
 
-  constructor(private DoReq: DoReqService) { }
+  public imgUrlBase = '';
+  constructor(private DoReq: DoReqService) {
+      this.imgUrlBase = environment.apiUrlBase + 'img/';
+   }
 
-  cars: Car[] = null;
+  cars = null;
   ngOnInit(): void {
-    this.DoReq.getCars(null , null, null).subscribe((data: Car[]) => {
+    this.DoReq.getCars(null , null, null).subscribe((data) => {
       console.log(data);
       this.cars = data;
 
     });
   }
 
+  close() {
+
+  }
 }

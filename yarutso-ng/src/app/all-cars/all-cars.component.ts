@@ -10,7 +10,7 @@ import { SingleCarComponent } from '../components/single-car/single-car.componen
 import { Car } from '../car';
 import { MatDialog } from '@angular/material/dialog';
 import { EditCarComponent } from '../components/edit-car/edit-car.component';
-
+import { environment } from '../../environments/environment';
 /**
  * @title Table retrieving data through HTTP
  */
@@ -26,11 +26,13 @@ export class AllCarsComponent implements AfterViewInit {
   resultsLength = 0;
   isLoadingResults = true;
   isRateLimitReached = false;
-
+  public imgUrlBase = '';
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor(private DoReq: DoReqService, private _bottomSheet: MatBottomSheet, public dialog: MatDialog) {}
+  constructor(private DoReq: DoReqService, private _bottomSheet: MatBottomSheet, public dialog: MatDialog) {
+    this.imgUrlBase = environment.apiUrlBase + 'img/';
+  }
 
   ngAfterViewInit() {
     // If the user changes the sort order, reset back to the first page.
