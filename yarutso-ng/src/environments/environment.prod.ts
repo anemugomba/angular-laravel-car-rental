@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrlBase: 'http://21dc82fb.ngrok.io/yarutso-both/yarutso-laravel/public/'
+  apiUrlBase: 'http://42be72e9.ngrok.io/yarutso-both/yarutso-laravel/public/'
 };

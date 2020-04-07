@@ -11,6 +11,7 @@ import { environment } from '../../environments/environment';
 export class CheckOutComponent implements OnInit {
 
   public imgUrlBase = '';
+  loading = true;
   constructor(private DoReq: DoReqService) {
       this.imgUrlBase = environment.apiUrlBase + 'img/';
    }
@@ -18,7 +19,7 @@ export class CheckOutComponent implements OnInit {
   cars = null;
   ngOnInit(): void {
     this.DoReq.getCars(null , null, null).subscribe((data) => {
-      console.log(data);
+      this.loading = false;
       this.cars = data;
 
     });

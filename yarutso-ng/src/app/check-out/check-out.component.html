@@ -3,7 +3,7 @@
 
 <div class="container" style="padding-top: 80px; width: 100%;">
 
-<div class="app">
+<div class="app" *ngIf="!loading">
           <mat-card class="item" *ngFor="let car of cars" style="height: fit-content;">
             <mat-card-header>
               <mat-card-title>{{car.name}}</mat-card-title>
@@ -19,6 +19,11 @@
               <button mat-raised-button color="warn" [routerLink]="['/thank-you']" routerLinkActive="router-link-active"  (click)="close()">Checkout</button>
             </mat-card-actions>
           </mat-card>
+  </div>
 </div>
+
+<div class="center_div" *ngIf="loading">
+  <mat-spinner class="center_div"></mat-spinner>
 </div>
+
 </div>
