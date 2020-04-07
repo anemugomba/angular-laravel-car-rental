@@ -13,6 +13,7 @@ import { AllCarsComponent } from './all-cars/all-cars.component';
 import { BookingComponent } from './booking/booking.component';
 import { CheckOutComponent } from './check-out/check-out.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { ThankYouComponent } from './thank-you/thank-you.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path: 'create-booking', component: BookingComponent},
   {path: 'checkout', component: CheckOutComponent},
   {path: 'contact-us', component: ContactUsComponent},
+  {path: 'thank-you', component: ThankYouComponent},
   {path: 'admin', component: AdminLayoutComponent , children: [
     { path: 'login', component: LoginComponent, canActivate: [BeforeLoginService] },
     { path: 'signup', component: SignupComponent, canActivate: [AfterLoginService]},

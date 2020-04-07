@@ -38,6 +38,11 @@ import { NativeDateAdapter, DateAdapter, MAT_DATE_FORMATS, MatNativeDateModule }
 import { CheckOutComponent } from './check-out/check-out.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { SiteNavComponent } from './components/site-nav/site-nav.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import { ThankYouComponent } from './thank-you/thank-you.component';
 
 
 @NgModule({
@@ -56,7 +61,9 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     EditCarComponent,
     BookingComponent,
     CheckOutComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    SiteNavComponent,
+    ThankYouComponent
   ],
   entryComponents : [
     SingleCarComponent,
@@ -86,7 +93,10 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     MatDatepickerModule,
     MatNativeDateModule,
     ReactiveFormsModule,
-    MatGridListModule
+    MatGridListModule,
+    FlexLayoutModule,
+    MatSidenavModule,
+    MatListModule
   ],
   providers: [
     {provide: 'SnotifyToastConfig', useValue: ToastDefaults},

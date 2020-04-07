@@ -27,6 +27,7 @@
               "../yarutso-ng/node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css",
               "src/assets/css/bootstrap.css",
+              "src/assets/css/gaia.css",
               "../yarutso-ng/node_modules/ng-snotify/styles/material.scss"
             ],
             "scripts": [

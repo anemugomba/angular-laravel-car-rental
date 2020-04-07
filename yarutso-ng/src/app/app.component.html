@@ -16,11 +16,65 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
-<body style="height: 100vh;">
+<body>
+  <div>
+    <mat-toolbar color="primary" style="background-color: #e7e7e7;
+     color: #434547;
+     border-top: 1px solid gray;
+     -webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;">
+      <mat-toolbar-row>
+        <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+          <mat-icon>menu</mat-icon>
+        </button>
 
 
 
-  <router-outlet></router-outlet>
+        <div>
+          <img src="assets/img/Yarutso-logo-no-bg.png" style="height: 65px;"alt="">
+        </div>
+
+        <span class="example-spacer"></span>
+        <div fxShow="true" fxHide.lt-md="true">
+          <a [routerLink]="['/']" routerLinkActive="router-link-active" color="warn"  mat-button>
+            <!--<mat-icon>home</mat-icon>-->
+            Home
+          </a>
+          <a [routerLink]="['/contact-us']" routerLinkActive="router-link-active" color="warn"  mat-button>
+            <!--<mat-icon>contact_phone</mat-icon>-->
+            Contact Us
+          </a>
+          <a mat-raised-button color="warn" [routerLink]="['/create-booking']">Create Booking</a>
+        </div>
+      </mat-toolbar-row>
+    </mat-toolbar>
+
+    <mat-sidenav-container fxFlexFill>
+      <mat-sidenav #sidenav style="width: 150px;">
+        <mat-nav-list>
+          <a [routerLink]="['/']" mat-list-item class="sid-nav-font">
+            <!--<mat-icon>home</mat-icon>-->
+            Home
+          </a>
+          <a [routerLink]="['/contact-us']" mat-list-item class="sid-nav-font">
+            <!--<mat-icon>contact_phone</mat-icon>-->
+            Contact Us
+          </a>
+          <a [routerLink]="['/create-booking']" mat-list-item class="sid-nav-font">
+            <!--<mat-icon>directions_car</mat-icon>-->
+            Create Booking
+          </a>
+          <a (click)="sidenav.toggle()" mat-list-item class="sid-nav-font">
+            <mat-icon>close</mat-icon> Close
+          </a>
+        </mat-nav-list>
+      </mat-sidenav>
+      <mat-sidenav-content fxFlexFill>
+        <router-outlet></router-outlet>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
 
   <ng-snotify></ng-snotify>
 </body>

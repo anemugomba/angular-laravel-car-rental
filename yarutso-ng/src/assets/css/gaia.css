@@ -190,7 +190,7 @@ a:hover {
 }
 
 .text-danger {
-  color: #e78b90 !important;
+  color: rgb(223, 37, 37) !important;
 }
 
 .text-gold,
@@ -242,10 +242,10 @@ a:hover {
 }
 
 .separator-danger {
-  color: #e78b90;
+  color:  rgb(223, 37, 37);
 }
 .separator-danger:before, .separator-danger:after {
-  border-color: #e78b90;
+  border-color:  rgb(223, 37, 37);
 }
 
 p.description {
@@ -574,8 +574,8 @@ a,
 
 .btn-danger,
 .navbar .navbar-nav > li > a.btn-danger {
-  border-color: #e78b90;
-  color: #e78b90;
+  border-color: red;
+  color: #e65159;
 }
 .btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .open > .btn-danger.dropdown-toggle,
 .navbar .navbar-nav > li > a.btn-danger:hover,
@@ -597,7 +597,7 @@ a,
 .btn-danger.btn-fill,
 .navbar .navbar-nav > li > a.btn-danger.btn-fill {
   color: #FFFFFF;
-  background-color: #e78b90;
+  background-color: rgb(223, 37, 37);
   opacity: 1;
   filter: alpha(opacity=100);
 }
@@ -920,7 +920,7 @@ a,
 }
 
 .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
-  background-color: #E3E3E3;
+  background-color: #888888;
   color: #888888;
   cursor: not-allowed;
 }
@@ -933,7 +933,7 @@ a,
   padding: 8px 0;
   font-size: 16px;
   background-color: transparent;
-  border-color: #E3E3E3;
+  border-color: #777;
   resize: vertical;
 }
 .form-control-plain:focus {

@@ -1,20 +1,10 @@
-<mat-toolbar color="primary" class="app-toolbar">
+<div style="background-color: transparent;overflow-x: hidden;">
 
-  <img src="assets/img/Yarutso-logo-no-bg.png" style="height: 60px;" alt="">
-  <h1>
-    Checkout
-  </h1>
-  <!-- This fills the remaining space of the current row -->
-  <span class="example-fill-remaining-space"></span>
 
-  <button mat-button [routerLink]="['/']" routerLinkActive="router-link-active" >Home</button>
-  <button mat-button >Checkout</button>
-</mat-toolbar>
-
-<div class="container" style="padding-top: 50px; width: 100%;">
+<div class="container" style="padding-top: 80px; width: 100%;">
 
 <div class="app">
-          <mat-card class="item" *ngFor="let car of cars">
+          <mat-card class="item" *ngFor="let car of cars" style="height: fit-content;">
             <mat-card-header>
               <mat-card-title>{{car.name}}</mat-card-title>
               <mat-card-subtitle>$ {{car.price}}</mat-card-subtitle>
@@ -26,8 +16,9 @@
               </p>
             </mat-card-content>
             <mat-card-actions>
-              <button mat-button (click)="close()" color="primary">Checkout</button>
+              <button mat-raised-button color="warn" [routerLink]="['/thank-you']" routerLinkActive="router-link-active"  (click)="close()">Checkout</button>
             </mat-card-actions>
           </mat-card>
+</div>
 </div>
 </div>
