@@ -5,11 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LandingComponent } from './landing/landing.component';
-import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
-import { LoginComponent } from './login/login.component';
+import { AdminLayoutComponent } from './site-admin/admin-layout/admin-layout.component';
+import { LoginComponent } from './site-admin/login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { SignupComponent } from './signup/signup.component';
-import { ProfileComponent } from './profile/profile.component';
+import { SignupComponent } from './site-admin/signup/signup.component';
+import { ProfileComponent } from './site-admin/profile/profile.component';
 import { RequestResetComponent } from './password/request-reset/request-reset.component';
 import { ResponseResetComponent } from './password/response-reset/response-reset.component';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
@@ -25,16 +25,16 @@ import {MatInputModule} from '@angular/material/input';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatTableModule} from '@angular/material/table';
-import { AllCarsComponent } from './all-cars/all-cars.component';
+import { AllCarsComponent } from './site-admin/all-cars/all-cars.component';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { MatSortModule  } from '@angular/material/sort';
 import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
-import { SingleCarComponent } from './components/single-car/single-car.component';
-import { EditCarComponent } from './components/edit-car/edit-car.component';
+import { SingleCarComponent } from './site-admin/single-car/single-car.component';
+import { EditCarComponent } from './site-admin/edit-car/edit-car.component';
 import { BookingComponent } from './booking/booking.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
-import { NativeDateAdapter, DateAdapter, MAT_DATE_FORMATS, MatNativeDateModule } from '@angular/material/core';
+import { NativeDateAdapter, DateAdapter, MAT_DATE_FORMATS, MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
 import { CheckOutComponent } from './check-out/check-out.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { ContactUsComponent } from './contact-us/contact-us.component';
@@ -43,6 +43,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import { ThankYouComponent } from './thank-you/thank-you.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 @NgModule({
@@ -63,7 +64,8 @@ import { ThankYouComponent } from './thank-you/thank-you.component';
     CheckOutComponent,
     ContactUsComponent,
     SiteNavComponent,
-    ThankYouComponent
+    ThankYouComponent,
+    NotFoundComponent
   ],
   entryComponents : [
     SingleCarComponent,
@@ -100,6 +102,7 @@ import { ThankYouComponent } from './thank-you/thank-you.component';
   ],
   providers: [
     {provide: 'SnotifyToastConfig', useValue: ToastDefaults},
+    { provide: MAT_DATE_LOCALE, useValue: 'en-GB' },
     SnotifyService],
   bootstrap: [AppComponent]
 })

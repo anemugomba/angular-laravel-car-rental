@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CheckNavbarService } from '../services/check-navbar.service';
 
 @Component({
   selector: 'app-contact-us',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactUsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private CheckNav: CheckNavbarService) { }
 
   ngOnInit(): void {
+    this.CheckNav.changeSiteStatus(true);
   }
 
 }

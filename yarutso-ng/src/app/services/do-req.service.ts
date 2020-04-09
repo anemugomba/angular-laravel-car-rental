@@ -32,9 +32,9 @@ export class DoReqService {
   }
 
   getCars(sort: string, order: string, page: number): Observable<Car> {
-    console.log('sort', sort);
+    /*console.log('sort', sort);
     console.log('order', order);
-    console.log('page number', page);
+    console.log('page number', page);*/
     return this.http.get<Car>(`${this.baseUrl}/cars?sort=${sort}&order=${order}&page=${page + 1}`);
   }
 
@@ -51,6 +51,10 @@ export class DoReqService {
       reportProgress: true,
       observe: 'events'
     });
+  }
+
+  public checkOut(data) {
+    return this.http.post(`${this.baseUrl}/checkout`, data);
   }
 }
 

@@ -1,5 +1,4 @@
-<div style="background-color: transparent; background: url('assets/img/book-car-header.jpg') no-repeat center center fixed;
-height: 100vh; overflow-x: hidden;">
+<div style="background-color: transparent; background: url('assets/img/book-car-header.jpg') no-repeat center center fixed; overflow-x: hidden;">
 
 <div style="background-color: transparent; height: 80px;">
 
@@ -15,20 +14,27 @@ height: 100vh; overflow-x: hidden;">
           <mat-card-subtitle>Give us your details and we will get intouch with you.</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
-          <form action="">
+          <form #bookingForm=ngForm (ngSubmit)="onSubmit()">
             <mat-form-field>
-              <mat-label>From</mat-label>
-              <input matInput [matDatepicker]="picker1" [formControl]="date">
+              <mat-label>From : Press calendar icon to select date</mat-label>
+              <input matInput [min]="minDateFrom" [matDatepicker]="picker1" [formControl]="date"
+              (dateInput)="getFromDate($event)" (dateChange)="getFromDate($event)" readonly required>
               <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-              <mat-datepicker #picker1></mat-datepicker>
+              <mat-datepicker #picker1 disabled="false"></mat-datepicker>
+              <mat-hint *ngIf="errors.fromDate" style="color: red; font-size: x-small;">
+                Please enter a from date!
+              </mat-hint>
             </mat-form-field>
             <br>
+            <br>
             <mat-form-field>
-              <mat-label>To</mat-label>
+              <mat-label>To : Press calendar icon to select date</mat-label>
               <input matInput [matDatepicker]="picker2"
-                     [formControl]="serializedDate">
+                     [formControl]="serializedDate" [min]="minDateTo"
+                     (dateInput)="getToDate($event)" (dateChange)="getToDate($event)" readonly required>
               <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-              <mat-datepicker #picker2></mat-datepicker>
+              <mat-datepicker #picker2 disabled="false"></mat-datepicker>
+
             </mat-form-field>
           <br>
             <!--<mat-form-field>
@@ -37,25 +43,42 @@ height: 100vh; overflow-x: hidden;">
               <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
               <mat-datepicker #picker3></mat-datepicker>
             </mat-form-field>-->
+
+            <p>
+              <mat-form-field appearance="outline">
+                <mat-label>Full Name</mat-label>
+                <input matInput placeholder="Full Name" autocomplete="name" type="text" name="fullName" [(ngModel)]="fullName" required>
+                <mat-icon matSuffix>person</mat-icon>
+                <mat-hint>Hint: John Doe &nbsp;</mat-hint>
+                </mat-form-field>
+                <span *ngIf="errors.fullName" style="color: red; font-size: x-small;">
+                  Please enter valid name
+                </span>
+            </p>
+
             <p>
               <mat-form-field appearance="outline">
                 <mat-label>Email</mat-label>
-                <input matInput placeholder="Email" name="description" required>
-                <mat-icon matSuffix>book</mat-icon>
-                <mat-hint>Hint: you@mail.com</mat-hint>
-              </mat-form-field>
+                <input matInput placeholder="Email" autocomplete="email" type="email" name="email" [(ngModel)]="email" required>
+                <mat-icon matSuffix>alternate_email</mat-icon>
+                <mat-hint>Hint: you@mail.com &nbsp;</mat-hint>
+                </mat-form-field>
+                <span *ngIf="errors.email" style="color: red; font-size: x-small;">
+                  Please enter valid email
+                </span>
             </p>
 
             <p>
               <mat-form-field appearance="outline">
                 <mat-label>Phone Number</mat-label>
-                <input matInput placeholder="Phone Number" name="Phone" required>
+                <input matInput placeholder="Phone Number" autocomplete="tel-national" type="tel" name="Phone" [(ngModel)]="phone" required>
                 <mat-icon matSuffix>phone</mat-icon>
                 <mat-hint>Hint: +263</mat-hint>
               </mat-form-field>
             </p>
 
-            <button mat-raised-button color="primary" [routerLink]="['/checkout']" routerLinkActive="router-link-active" >Proceed to select vehicle</button>
+            <button mat-raised-button [disabled]="!bookingForm.valid" color="primary" type="submit">Proceed to select vehicle</button>
+
           </form>
         </mat-card-content>
       </mat-card>

@@ -1,7 +1,7 @@
 <div style="background-color: transparent;overflow-x: hidden;">
 
 
-<div class="container" style="padding-top: 80px; width: 100%;">
+<div class="container" style="padding-top: 80px; width: 100%; height: 100%;">
 
 <div class="app" *ngIf="!loading">
           <mat-card class="item" *ngFor="let car of cars" style="height: fit-content;">
@@ -16,10 +16,10 @@
               </p>
             </mat-card-content>
             <mat-card-actions>
-              <button mat-raised-button color="warn" [routerLink]="['/thank-you']" routerLinkActive="router-link-active"  (click)="close()">Checkout</button>
+              <button mat-raised-button color="warn" [routerLink]="['/thank-you']" routerLinkActive="router-link-active"  (click)="checkOut(car)">Checkout</button>
             </mat-card-actions>
           </mat-card>
-  </div>
+</div>
 </div>
 
 <div class="center_div" *ngIf="loading">

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { DoReqService } from '../services/do-req.service';
-import { TokenService } from '../services/token.service';
+import { DoReqService } from '../../services/do-req.service';
+import { TokenService } from '../../services/token.service';
 import { Router } from '@angular/router';
-import { AuthService } from '../services/auth.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',

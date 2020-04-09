@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { DoReqService } from '../services/do-req.service';
-import { TokenService } from '../services/token.service';
+import { DoReqService } from '../../services/do-req.service';
+import { TokenService } from '../../services/token.service';
 import { Router } from '@angular/router';
 
 @Component({

@@ -4,13 +4,13 @@ import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {merge, Observable, of as observableOf} from 'rxjs';
 import {catchError, map, startWith, switchMap} from 'rxjs/operators';
-import { DoReqService } from '../services/do-req.service';
+import { DoReqService } from '../../services/do-req.service';
 import {MatBottomSheet, MatBottomSheetRef} from '@angular/material/bottom-sheet';
-import { SingleCarComponent } from '../components/single-car/single-car.component';
-import { Car } from '../car';
+import { SingleCarComponent } from '../single-car/single-car.component';
+import { Car } from '../../car';
 import { MatDialog } from '@angular/material/dialog';
-import { EditCarComponent } from '../components/edit-car/edit-car.component';
-import { environment } from '../../environments/environment';
+import { EditCarComponent } from '../edit-car/edit-car.component';
+import { environment } from '../../../environments/environment';
 /**
  * @title Table retrieving data through HTTP
  */
