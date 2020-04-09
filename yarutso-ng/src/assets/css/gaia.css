@@ -190,7 +190,7 @@ a:hover {
 }
 
 .text-danger {
-  color: rgb(223, 37, 37) !important;
+  color: #fecf1d !important;
 }
 
 .text-gold,
@@ -221,7 +221,7 @@ a:hover {
 }
 
 .separator {
-  color: #c5a47e;
+  color: #fecf1d;
   margin: 0 auto 20px;
   max-width: 240px;
   text-align: center;
@@ -232,7 +232,7 @@ a:hover {
   width: 40%;
   content: " ";
   margin-top: 10px;
-  border: 1px solid #c5a47e;
+  border: 1px solid #fecf1d;
 }
 .separator:before {
   float: left;
@@ -242,10 +242,10 @@ a:hover {
 }
 
 .separator-danger {
-  color:  rgb(223, 37, 37);
+  color:  #fecf1d;
 }
 .separator-danger:before, .separator-danger:after {
-  border-color:  rgb(223, 37, 37);
+  border-color:  #fecf1d;
 }
 
 p.description {

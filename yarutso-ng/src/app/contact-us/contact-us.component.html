@@ -10,42 +10,43 @@
               </div>
 
           <div class="social-buttons">
-              <button class="btn btn-social btn-simple"><i class="fa fa-facebook-square"></i></button>
-              <button class="btn btn-social btn-simple"><i class="fa fa-twitter"></i></button>
-              <button class="btn btn-social btn-simple"><i class="fa fa-instagram"></i></button>
-              <button class="btn btn-social btn-simple"><i class="fa fa-google"></i></button>
+              <a href="https://www.facebook.com/Yarutso-Car-Rental-107095123968254/" target="_blank" class="btn btn-social btn-simple"><i class="fa fa-facebook-square"></i></a>
+              <a href="https://www.linkedin.com/company/yarutso-car-rental/" target="_blank" class="btn btn-social btn-simple"><i class="fa fa-linkedin"></i></a>
+              <!--<button class="btn btn-social btn-simple"><i class="fa fa-instagram"></i></button>
+              <button class="btn btn-social btn-simple"><i class="fa fa-google"></i></button>-->
           </div>
 
           <div class="row">
               <div class="col-md-8 col-md-offset-2">
                   <div class="contact-form">
-                      <form action="" method="post">
+                      <form #contactUsForm=ngForm (ngSubmit)="onSubmit()">
                           <div class="row">
                               <div class="col-md-4">
                                   <div class="form-group">
                                       <label>Your Full Name</label>
-                                      <input type="text" name="name" value="" placeholder="John Doe" class="form-control form-control-plain">
+                                      <input type="text" name="name" [(ngModel)]="contactUs.name" value="" required autocomplete="name" placeholder="John Doe" class="form-control form-control-plain">
                                   </div>
                               </div>
                               <div class="col-md-4">
                                   <div class="form-group">
                                       <label>Your Email</label>
-                                      <input type="text" name="email" value="" placeholder="john.d@gmail.com" class="form-control form-control-plain">
+                                      <input type="email" required autocomplete="email" [(ngModel)]="contactUs.email" name="email" value="" placeholder="john.d@gmail.com" class="form-control form-control-plain">
                                   </div>
                               </div>
                               <div class="col-md-4">
                                   <div class="form-group">
                                       <label>Subject</label>
-                                      <input type="text" name="subject" value="" placeholder="Say hi to you" class="form-control form-control-plain">
+                                      <input type="text" name="subject" required [(ngModel)]="contactUs.subject" autocomplete="additional-name" value="" placeholder="Say hi to you" class="form-control form-control-plain">
                                   </div>
                               </div>
                               <div class="col-md-12">
                                   <div class="form-group">
-                                      <textarea name="content" class="form-control form-control-plain" placeholder="Here you can write your nice text" rows="8"></textarea>
+                                      <textarea name="content" required [(ngModel)]="contactUs.content" class="form-control form-control-plain" placeholder="Write to us" rows="8"></textarea>
                                   </div>
                                   <div>
                                       <div class="col-md-2 col-md-offset-5">
-                                          <button type="button" class="btn btn-danger btn-fill">
+                                        <mat-spinner *ngIf="isLoading"></mat-spinner>
+                                          <button *ngIf="!isLoading" type="submit" [disabled]="!contactUsForm.valid" class="btn-custom-yellow btn btn-fill">
                                               Contact Us
                                           </button>
                                       </div>

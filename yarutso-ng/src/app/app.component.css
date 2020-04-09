@@ -15,3 +15,21 @@
 .sid-nav-font {
  font-size: smaller;
 }
+
+.nav-button {
+  color: black;
+}
+mat-toolbar {
+  background-color: #fecf1d;
+     color: #fecf1d;
+     border-top: 5px solid #fecf1d;
+     -webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+}
+
+.nav-button-create {
+  background-color: black;
+  color: white;
+  border-color: black;
+}

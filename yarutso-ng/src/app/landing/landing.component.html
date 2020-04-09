@@ -13,7 +13,7 @@
                 </div>
 
                 <div class="button-get-started">
-                    <button class="btn btn-danger btn-fill btn-lg " [routerLink]="['/create-booking']" routerLinkActive="router-link-active" >
+                    <button class="btn-custom-yellow btn btn-danger btn-fill btn-lg " [routerLink]="['/create-booking']" routerLinkActive="router-link-active" >
                       Create Booking
                     </button>
                 </div>
@@ -39,26 +39,66 @@
             <div class="col-md-6">
                 <div class="info-icon">
                     <div class="icon text-danger">
-                        <i class="pe-7s-world"></i>
+                        <i class="pe-7s-way"></i>
                     </div>
-                    <h3>Vision</h3>
+                    <h2>Self-Driven Rentals</h2>
                     <p class="description">
-                      Our vision is to be the leading supplier of mobility solutions in Africa by 2025.
+                      Rent the vehicle of your choice from our large selection of vehicles to drive to your destination in comfort.
                     </p>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="info-icon">
                     <div class="icon text-danger">
-                        <i class="pe-7s-ribbon"></i>
+                        <i class="pe-7s-car"></i>
                     </div>
-                    <h3>Mission</h3>
+                    <h2>Chauffeur Driven Rentals</h2>
                     <p class="description">
-                      Yarutso car rental aims to bring customer happiness in the mobility solutions sector through comfort, convenience and affordability.
+                      Don't feel like driving? Not a problem. We offer affordable chauffeur service with our rentals.
                     </p>
                 </div>
             </div>
         </div>
+        <div class="row">
+          <div class="col-md-6">
+              <div class="info-icon">
+                  <div class="icon text-danger">
+                      <i class="pe-7s-plane"></i>
+                  </div>
+                  <h2>Airport Transferes</h2>
+                  <p class="description">
+                    Don't get delayed after checking in, get on the road right away to your destination with our efficient shuttle.
+                  </p>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="info-icon">
+                  <div class="icon text-danger">
+                      <i class="pe-7s-culture"></i>
+                  </div>
+                  <h2>School run transferes</h2>
+                  <p class="description">
+                    Are you busy with work? Don't worry we can do your school run for you. Take your little ones to and from school.
+                  </p>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+            <div class="info-icon">
+                <div class="icon text-danger">
+                    <i class="pe-7s-world"></i>
+                </div>
+                <h2>Package Deliveries</h2>
+                <p class="description">
+                  We will deliver your important parcels for you.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-6">
+
+        </div>
+    </div>
     </div>
   </div>
 
@@ -71,16 +111,10 @@
             <div class="content">
                 <div class="row">
                     <div class="title-area">
-                        <h2>A Little More About Us</h2>
+                        <h2>Our Team</h2>
                         <div class="separator separator-danger">✻</div>
                         <p class="description">
-                          Yarutso Car Rental was founded by Victor Tawanda Madzedze.
-                          Madzedze has a first class degree in B.com Marketing Management and is
-                          studying towards a Masters in Business Administration. With a stint of
-                          experience in FMCG after doing his internship with Pacific Cigarettes company
-                          and having helped position YA FM radio station as a brand and grow turnover by
-                          almost 200% . Yarutso Car rental is built from immense
-                          marketing and disruptive capabilities with operational excellence at the core.
+
                         </p>
                     </div>
                 </div>
@@ -97,9 +131,9 @@
                                             </div>
                                             <div class="description">
                                                 <h3 class="title">Victor</h3>
-                                                <p class="small-text">Founder / Brand strategist</p>
+                                                <p class="small-text">Founder & Brand strategist</p>
                                                 <p class="description">
-                                                  B.com Marketing (MSU) , Masters in business Administration (MSU).
+
                                                 </p>
                                             </div>
                                         </div>
@@ -117,7 +151,7 @@
                                             <div class="description">
                                                 <h3 class="title">Rufaro Matimati</h3>
                                                 <p class="small-text">Brand Strategist </p>
-                                                <p class="description">LLB Cavendish University. Masters in Business Administration (MSU)</p>
+                                                <p class="description"></p>
                                             </div>
                                         </div>
                                     </div>
@@ -202,7 +236,7 @@
             </div>
 
             <div class="button-get-started">
-                <a [routerLink]="['/contact-us']" routerLinkActive="router-link-active"  class="btn btn-danger btn-fill btn-lg">Contact Us</a>
+                <a [routerLink]="['/contact-us']" routerLinkActive="router-link-active"  class="btn-custom-yellow btn btn-danger btn-fill btn-lg">Contact Us</a>
             </div>
         </div>
     </div>
@@ -239,6 +273,12 @@
                                 <i class="fa fa-facebook-square"></i> Facebook
                             </a>
                         </li>
+                        <li>
+                          <a href="https://www.linkedin.com/company/yarutso-car-rental/" target="_blank" class="btn btn-social btn-simple">
+                            <i class="fa fa-linkedin"></i> LinkIn
+                          </a>
+
+                      </li>
                     </ul>
                 </nav>
             </div>
@@ -265,7 +305,7 @@
         </div>
         <hr>
         <div class="copyright">
-             © <script> document.write(new Date().getFullYear()) </script> Yarutso
+             © <span> {{copyrightDate}}</span> Yarutso
         </div>
     </div>
   </footer>

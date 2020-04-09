@@ -22,4 +22,5 @@ Route::group([
     Route::post('addCar','CarsController@add');
     Route::post('updateCar','CarsController@update');
     Route::post('checkout','CheckoutController@checkout');
+    Route::post('contactus','ContactUsController@sendEmail');
 });

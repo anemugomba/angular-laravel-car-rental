@@ -8,6 +8,7 @@ import { CheckNavbarService } from '../services/check-navbar.service';
 })
 export class LandingComponent implements OnInit {
 
+  copyrightDate = new Date().getFullYear();
   constructor(private CheckNav: CheckNavbarService) {
 
   }

@@ -56,5 +56,9 @@ export class DoReqService {
   public checkOut(data) {
     return this.http.post(`${this.baseUrl}/checkout`, data);
   }
+
+  public contactUs(data) {
+    return this.http.post(`${this.baseUrl}/contactus`, data);
+  }
 }
 

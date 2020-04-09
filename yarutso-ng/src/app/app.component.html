@@ -18,14 +18,9 @@
 
 <body>
   <div>
-    <mat-toolbar *ngIf="isAtSite" color="primary" style="background-color: #e7e7e7;
-     color: #434547;
-     border-top: 1px solid gray;
-     -webkit-box-shadow: 0 8px 6px -6px black;
-	   -moz-box-shadow: 0 8px 6px -6px black;
-	        box-shadow: 0 8px 6px -6px black;">
+    <mat-toolbar *ngIf="isAtSite">
       <mat-toolbar-row>
-        <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+        <button mat-icon-button style="color: black;" (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
           <mat-icon>menu</mat-icon>
         </button>
 
@@ -37,15 +32,15 @@
 
         <span class="example-spacer"></span>
         <div fxShow="true" fxHide.lt-md="true">
-          <a [routerLink]="['/']" routerLinkActive="router-link-active" color="warn"  mat-button>
+          <a [routerLink]="['/']" color="basic"   class="nav-button" mat-button>
             <!--<mat-icon>home</mat-icon>-->
             Home
           </a>
-          <a [routerLink]="['/contact-us']" routerLinkActive="router-link-active" color="warn"  mat-button>
+          <a [routerLink]="['/contact-us']" color="basic"  class="nav-button" mat-button>
             <!--<mat-icon>contact_phone</mat-icon>-->
             Contact Us
           </a>
-          <a mat-raised-button color="warn" [routerLink]="['/create-booking']">Create Booking</a>
+          <a mat-raised-button [routerLink]="['/create-booking']"  class="nav-button-create">Create Booking</a>
         </div>
       </mat-toolbar-row>
     </mat-toolbar>

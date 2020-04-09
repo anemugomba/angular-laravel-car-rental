@@ -1,0 +1,12 @@
+.btn-custom-yellow {
+  background-color : #fecf1d;
+  color: black;
+  border: 1px solid #fecf1d;
+}
+
+.btn-custom-yellow:hover {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+
