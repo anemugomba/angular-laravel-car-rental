@@ -1,0 +1,26 @@
+language: php
+
+php:
+  - 7.4
+  - 7.4
+
+before_script:
+  - cp .env.travis .env
+  - composer self-update
+  - composer install --prefer-source --no-interaction --dev
+  - php artisan key:generate
+  - php artisan jwt:generate
+  - php artisan migrate
+
+before_install:
+  - mysql -e 'CREATE DATABASE realworld_test;'
+
+script:
+  - cd yarutso-laravel
+  - phpunit
+
+services:
+  - mysql
+
+notifications:
+  email: false
