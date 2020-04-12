@@ -1,8 +1,9 @@
-## Project title
-A little info about your project and/ or overview that explains **what** the project is about.
+## Angular and laravel simple car rental application.
+This is a car rental website and admin panel. Visitors can go on to a website, browse a catalog of vehicles, leave their contact information and checkout. The site admin gets an email with the user details and vehicle of choice and gets to contact them if they so wish.
+Within the admin panel, the site admin can create/view/update/delete vehicles that appear on the site.
 
 ## Motivation
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
+This project is meant to help out those starting with angular and laravel on how to integrate the two to make beautiful, fast and responsive applications. It is a "getting started" with laravel and angular project that goes beyond a "hello world" application.
 
 ## Build status
 Build status of continus integration i.e. travis, appveyor etc. Ex. - 
