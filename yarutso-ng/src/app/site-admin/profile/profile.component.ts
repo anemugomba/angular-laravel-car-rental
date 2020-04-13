@@ -48,8 +48,11 @@ export class ProfileComponent implements OnInit {
     myFormData.append('description', this.form.description);
     myFormData.append('price', this.form.price);
     this.DoReq.upload(myFormData).subscribe(data => {
-      console.log(data);
-      this.router.navigate(['/admin/all-cars']);
+
+      this.router.navigateByUrl('/admin', { skipLocationChange: true }).then(() => {
+        this.router.navigate(['/admin/all-cars']);
+    });
+
  }, err => this.handleError(err));
 
   }

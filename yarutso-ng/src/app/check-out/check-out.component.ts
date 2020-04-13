@@ -20,12 +20,21 @@ export class CheckOutComponent implements OnInit {
    }
 
   cars = null;
+  isCarsAvailable = false;
   ngOnInit(): void {
     this.CheckNav.changeSiteStatus(true);
     this.DoReq.getCars(null , null, null).subscribe((data) => {
       this.loading = false;
       this.cars = data;
-
+      if (this.cars.length) {
+        this.isCarsAvailable = true;
+      } else {
+        this.isCarsAvailable = false;
+      }
+    }, (err) => {
+      this.isCarsAvailable = false;
+      this.loading = false;
+      this.cars = [];
     });
   }
 

@@ -23,4 +23,5 @@ Route::group([
     Route::post('updateCar','CarsController@update');
     Route::post('checkout','CheckoutController@checkout');
     Route::post('contactus','ContactUsController@sendEmail');
+    Route::post('deleteCar','CarsController@delete');
 });

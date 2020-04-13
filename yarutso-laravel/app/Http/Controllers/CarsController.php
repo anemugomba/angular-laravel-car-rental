@@ -74,4 +74,19 @@ class CarsController extends Controller
             return response()->json(["message" => "Updated Successfully"],Response::HTTP_OK);
         }
     }
+
+    public function delete(Request $request){
+
+        $car = Car::findOrFail($request->id);
+
+            $image_path = public_path().'/img/'.$car->img_name;
+
+            if(file_exists ($image_path)) {
+               unlink($image_path);
+                }
+
+                $car -> delete();
+        return response()->json(['vehicle deleted'], Response::HTTP_ACCEPTED);
+
+    }
 }

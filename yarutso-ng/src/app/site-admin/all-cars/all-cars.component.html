@@ -1,12 +1,5 @@
-<div class="example-container mat-elevation-z8" style="margin-left: 10px; margin-right: 10px;">
-  <div class="example-loading-shade"
-       *ngIf="isLoadingResults">
-    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
-  </div>
 
-  <div class="example-table-container">
-
-    <table mat-table [dataSource]="data" class="example-table"
+    <table mat-table [dataSource]="data"
            matSort matSortActive="name" matSortDisableClear matSortDirection="desc">
       <!-- Number Column -->
       <ng-container matColumnDef="id">
@@ -56,7 +49,5 @@
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
-  </div>
+ <mat-paginator [length]="resultsLength" [pageSize]="30"></mat-paginator>
 
-  <mat-paginator [length]="resultsLength" [pageSize]="30"></mat-paginator>
-</div>

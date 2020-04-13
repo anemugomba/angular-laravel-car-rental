@@ -1,7 +1,7 @@
 <div style="background-color: transparent;overflow-x: hidden;">
 
 
-<div class="container" style="padding-top: 80px; width: 100%; height: 100%;">
+<div class="container" style="padding-top: 50px; width: 100%; height: 100%; background-color: white;">
 
 <div class="app" *ngIf="!loading">
           <mat-card class="item" *ngFor="let car of cars" style="height: fit-content;">
@@ -24,6 +24,10 @@
 
 <div class="center_div" *ngIf="loading">
   <mat-spinner class="center_div"></mat-spinner>
+</div>
+
+<div class="center_div" *ngIf="!isCarsAvailable">
+  <h1>There are no cars available at the moment!</h1>
 </div>
 
 </div>

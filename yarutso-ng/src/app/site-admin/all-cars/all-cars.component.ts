@@ -82,6 +82,13 @@ export class AllCarsComponent implements AfterViewInit {
   }
 
   delete(car) {
-    console.log(car);
+    const r = confirm('Are you sure you want to delete this vehicle?');
+    if ( r == true) {
+      this.DoReq.deleteCar(car).subscribe((data) => {
+        location.reload();
+      }, ( err ) => {
+        console.log(err);
+      });
+    }
   }
 }

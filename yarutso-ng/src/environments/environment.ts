@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrlBase: 'http://localhost/yarutso-both/yarutso-laravel/public/'
+  apiUrlBase: 'http://localhost/angular-laravel-car-rental/yarutso-laravel/public/'
 };
 
 /*

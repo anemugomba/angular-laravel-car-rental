@@ -28,13 +28,15 @@
               "src/styles.css",
               "src/assets/css/bootstrap.css",
               "src/assets/css/gaia.css",
-              "../yarutso-ng/node_modules/ng-snotify/styles/material.scss"
+              "../yarutso-ng/node_modules/ng-snotify/styles/material.scss",
+              "../yarutso-ng/node_modules/cropperjs/dist/cropper.css"
             ],
             "scripts": [
               "src/assets/js/jquery.min.js",
               "src/assets/js/bootstrap.js",
               "src/assets/js/modernizr.js",
-              "src/assets/js/gaia.js"
+              "src/assets/js/gaia.js",
+              "../yarutso-ng/node_modules/cropperjs/dist/cropper.js"
             ]
           },
           "configurations": {

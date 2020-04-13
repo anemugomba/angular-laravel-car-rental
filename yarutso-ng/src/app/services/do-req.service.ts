@@ -60,5 +60,9 @@ export class DoReqService {
   public contactUs(data) {
     return this.http.post(`${this.baseUrl}/contactus`, data);
   }
+
+  public deleteCar(data) {
+    return this.http.post<any>(`${this.baseUrl}/deleteCar`, data);
+  }
 }
 
