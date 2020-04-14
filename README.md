@@ -61,7 +61,6 @@ an example is  apiUrlBase: 'http://localhost/angular-laravel-car-rental/yarutso-
 ```
  - run npm install in your angular base folder
  - run ng serve
-With thes steps you shoud be good to go.
 
 ## How to use?
 To Navigate to the admin portal go to http://localhost:4200/admin/login
@@ -71,8 +70,5 @@ To Navigate to the admin portal go to http://localhost:4200/admin/login
 -[Bitfumes](https://www.youtube.com/watch?v=CtklHQUfNZQ)  (Laravel Angular Authentication with JWT)
 
 #### Anything else that seems useful
-
-## License
-A short snippet describing the license (MIT, Apache etc)
 
 MIT © [anemugomba](https://github.com/anemugomba/angular-laravel-car-rental/)
