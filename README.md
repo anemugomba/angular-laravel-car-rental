@@ -45,6 +45,7 @@ Navigate into yarutso-laravel and run the following commands
   - php artisan jwt:secret
   - php artisan migrate
   - php artisan db:seed --class=UserSeeder (this will create a user for you to login into the admin - [username is admin@gmail.com & password is password]
+  - For convenience in email setup you can visit [mailtrap.io](https://blog.mailtrap.io/send-email-in-laravel/)
   
 The next step is to navigate into the yarutso-ng folder. Folder contains angular code. 
  - go to \yarutso-ng\src\environments\environments.ts
