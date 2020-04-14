@@ -16,16 +16,35 @@ Ex. -
 <b>Built with</b>
 - [Angular](https://angular.io/)
 - [Laravel](https://laravel.com/)
-- [Laravel](https://www.creative-tim.com/)
-
-## Features
-What makes your project stand out?
+- [Creative Tim](https://www.creative-tim.com/)
 
 ## Code Example
-Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+```
+public function delete(Request $request){
 
+        $car = Car::findOrFail($request->id);
+
+            $image_path = public_path().'/img/'.$car->img_name;
+
+            if(file_exists ($image_path)) {
+               unlink($image_path);
+                }
+
+                $car -> delete();
+        return response()->json(['vehicle deleted'], Response::HTTP_ACCEPTED);
+
+    }
+```
 ## Installation
-Provide step by step series of examples and explanations about how to get a development env running.
+Make sure PHP >= 7.2.5
+After downloading project. Place yarutso-laravel folder in your development folder e.g. htdocs for xampp.(Installation process assumes you have a knowledge of laravel and composer and you have these already set up)
+Navigate into yarutso-laravel and run the following commands
+  - composer install
+  - php artisan key:generate
+  - php artisan jwt:secret
+  - php artisan migrate
+  - php artisan db:seed --class=UserSeeder
+  - 
 
 ## API Reference
 
