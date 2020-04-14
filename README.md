@@ -7,7 +7,8 @@ This project is meant to help out those starting with angular and laravel on how
  
 ## Screenshots
 ![Image of 1](https://i.imgur.com/lIm0lmg.png)
-![Image of 1](https://i.imgur.com/1p8Xy3Z.png)
+![Image of 1](https://i.imgur.com/ZBrFPTz.png)
+![Image of 1](https://i.imgur.com/Id63pEj.png)
 
 ## Tech/framework used
 Ex. -
