@@ -70,6 +70,4 @@ To Navigate to the admin portal go to http://localhost:4200/admin/login
 ## Credits
 -[Bitfumes](https://www.youtube.com/watch?v=CtklHQUfNZQ)  (Laravel Angular Authentication with JWT)
 
-#### Anything else that seems useful
-
 MIT © [anemugomba](https://github.com/anemugomba/angular-laravel-car-rental/)
