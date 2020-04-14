@@ -14,7 +14,9 @@ This project is meant to help out those starting with angular and laravel on how
 Ex. -
 
 <b>Built with</b>
-- [Electron](https://electron.atom.io)
+- [Angular](https://angular.io/)
+- [Laravel](https://laravel.com/)
+- [Laravel](https://www.creative-tim.com/)
 
 ## Features
 What makes your project stand out?
