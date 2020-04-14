@@ -39,26 +39,33 @@ public function delete(Request $request){
 Make sure PHP >= 7.2.5
 After downloading project. Place yarutso-laravel folder in your development folder e.g. htdocs for xampp.(Installation process assumes you have a knowledge of laravel and composer and you have these already set up)
 Navigate into yarutso-laravel and run the following commands
+  - create DB and place db details in your env file.
   - composer install
   - php artisan key:generate
   - php artisan jwt:secret
   - php artisan migrate
-  - php artisan db:seed --class=UserSeeder
-  - 
+  - php artisan db:seed --class=UserSeeder (this will create a user for you to login into the admin - [username is admin@gmail.com & password is password]
+  
+The next step is to navigate into the yarutso-ng folder. Folder contains angular code. 
+ - go to \yarutso-ng\src\environments\environments.ts
+ - within the environments.ts file change the following
+```
+export const environment = {
+  production: false,
+  apiUrlBase: 'http://localhost/[path to your laravel project]/public/'
+};
 
-## API Reference
-
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
-
-## Tests
-Describe and show how to run the tests with code examples. 
+/*
+an example is  apiUrlBase: 'http://localhost/angular-laravel-car-rental/yarutso-laravel/public/'
+*/
+```
+ - run npm install in your angular base folder
+ - run ng serve
+With thes steps you shoud be good to go.
 
 ## How to use?
+To Navigate to the admin portal go to http://localhost:4200/admin/login
 
-
-## Contribute
-
-Let people know how they can contribute into your project. A [contributing guideline](https://github.com/zulip/zulip-electron/blob/master/CONTRIBUTING.md) will be a big plus.
 
 ## Credits
 Give proper credits. This could be a link to any repo which inspired you to build this project, any blogposts or links to people who contrbuted in this project. 
