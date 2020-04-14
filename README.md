@@ -6,7 +6,7 @@ Within the admin panel, the site admin can create/view/update/delete vehicles th
 This project is meant to help out those starting with angular and laravel on how to integrate the two to make beautiful, fast and responsive applications. It is a "getting started" with laravel and angular project that goes beyond a "hello world" application.
  
 ## Screenshots
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+![Image of Yaktocat](https://imgur.com/lIm0lmg)
 
 ## Tech/framework used
 Ex. -
