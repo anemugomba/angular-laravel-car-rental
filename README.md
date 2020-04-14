@@ -68,11 +68,11 @@ To Navigate to the admin portal go to http://localhost:4200/admin/login
 
 
 ## Credits
-Give proper credits. This could be a link to any repo which inspired you to build this project, any blogposts or links to people who contrbuted in this project. 
+-[Bitfumes](https://www.youtube.com/watch?v=CtklHQUfNZQ)  (Laravel Angular Authentication with JWT)
 
 #### Anything else that seems useful
 
 ## License
 A short snippet describing the license (MIT, Apache etc)
 
-MIT © [Yourname]()
+MIT © [anemugomba](https://github.com/anemugomba/angular-laravel-car-rental/)
