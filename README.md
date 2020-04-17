@@ -6,43 +6,68 @@ Within the admin panel, the site admin can create/view/update/delete vehicles th
 This project is meant to help out those starting with angular and laravel on how to integrate the two to make beautiful, fast and responsive applications. It is a "getting started" with laravel and angular project that goes beyond a "hello world" application.
  
 ## Screenshots
-Include logo/demo screenshot etc.
+![Image of 1](https://i.imgur.com/lIm0lmg.png)
+![Image of 1](https://i.imgur.com/ZBrFPTz.png)
+![Image of 1](https://i.imgur.com/Id63pEj.png)
 
 ## Tech/framework used
 Ex. -
 
 <b>Built with</b>
-- [Electron](https://electron.atom.io)
-
-## Features
-What makes your project stand out?
+- [Angular](https://angular.io/)
+- [Laravel](https://laravel.com/)
+- [Creative Tim](https://www.creative-tim.com/)
 
 ## Code Example
-Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+```
+public function delete(Request $request){
 
+        $car = Car::findOrFail($request->id);
+
+            $image_path = public_path().'/img/'.$car->img_name;
+
+            if(file_exists ($image_path)) {
+               unlink($image_path);
+                }
+
+                $car -> delete();
+        return response()->json(['vehicle deleted'], Response::HTTP_ACCEPTED);
+
+    }
+```
 ## Installation
-Provide step by step series of examples and explanations about how to get a development env running.
+Make sure PHP >= 7.2.5
+After downloading project. Place yarutso-laravel folder in your development folder e.g. htdocs for xampp.(Installation process assumes you have a knowledge of laravel and composer and you have these already set up)
+Navigate into yarutso-laravel and run the following commands
+  - create DB and place db details in your env file.
+  - composer install
+  - php artisan key:generate
+  - php artisan jwt:secret
+  - php artisan migrate
+  - php artisan db:seed --class=UserSeeder (this will create a user for you to login into the admin - [username is admin@gmail.com & password is password]
+  - For convenience in email setup you can visit [mailtrap.io](https://blog.mailtrap.io/send-email-in-laravel/)
+  
+The next step is to navigate into the yarutso-ng folder. Folder contains angular code. 
+ - go to \yarutso-ng\src\environments\environments.ts
+ - within the environments.ts file change the following
+```
+export const environment = {
+  production: false,
+  apiUrlBase: 'http://localhost/[path to your laravel project]/public/'
+};
 
-## API Reference
-
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
-
-## Tests
-Describe and show how to run the tests with code examples. 
+/*
+an example is  apiUrlBase: 'http://localhost/angular-laravel-car-rental/yarutso-laravel/public/'
+*/
+```
+ - run npm install in your angular base folder
+ - run ng serve
 
 ## How to use?
+To Navigate to the admin portal go to http://localhost:4200/admin/login
 
-
-## Contribute
-
-Let people know how they can contribute into your project. A [contributing guideline](https://github.com/zulip/zulip-electron/blob/master/CONTRIBUTING.md) will be a big plus.
 
 ## Credits
-Give proper credits. This could be a link to any repo which inspired you to build this project, any blogposts or links to people who contrbuted in this project. 
+-[Bitfumes](https://www.youtube.com/watch?v=CtklHQUfNZQ)  (Laravel Angular Authentication with JWT)
 
-#### Anything else that seems useful
-
-## License
-A short snippet describing the license (MIT, Apache etc)
-
-MIT © [Yourname]()
+MIT © [anemugomba](https://github.com/anemugomba/angular-laravel-car-rental/)
